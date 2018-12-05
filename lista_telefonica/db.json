@@ -1,0 +1,188 @@
+{
+  "contatos": [
+    {
+      "id": 1,
+      "nome": "Pedro",
+      "telefone": "9999-0001",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": 14,
+        "categoria": "Celular"
+      }
+    },
+    {
+      "id": 2,
+      "nome": "Ana",
+      "telefone": "9999-1001",
+      "operadora": {
+        "nome": "Vivo",
+        "codigo": 15,
+        "categoria": "Celular"
+      }
+    },
+    {
+      "id": 3,
+      "nome": "Maria",
+      "telefone": "9999-0301",
+      "operadora": {
+        "nome": "Tim",
+        "codigo": 41,
+        "categoria": "Celular",
+        "preco": 3
+      }
+    },
+    {
+      "nome": "Renata",
+      "telefone": "9999-1111",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 4
+    },
+    {
+      "nome": "iuaiosda",
+      "telefone": "1111-1111",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 5
+    },
+    {
+      "nome": "ksjdka",
+      "telefone": "1111-1111",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 6
+    },
+    {
+      "nome": "Porta",
+      "telefone": "1111-1111",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 7
+    },
+    {
+      "nome": "Renata",
+      "telefone": "9999-1111",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 8
+    },
+    {
+      "nome": "Felipe",
+      "telefone": "9999-1111",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 9
+    },
+    {
+      "nome": "Christine",
+      "telefone": "8888-1111",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 10
+    },
+    {
+      "nome": "Postman",
+      "telefone": "9999-1111",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 11
+    },
+    {
+      "nome": "Sarah",
+      "telefone": "9999-1111",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 12
+    },
+    {
+      "nome": "Amanda",
+      "telefone": "6161-1010",
+      "operadora": {
+        "nome": "Vivo",
+        "codigo": "15",
+        "categoria": "Celular",
+        "preco": 1
+      },
+      "id": 13
+    },
+    {
+      "nome": "Mary",
+      "telefone": "9999-1020",
+      "operadora": {
+        "nome": "Vivo",
+        "codigo": "15",
+        "categoria": "Celular",
+        "preco": 1
+      },
+      "id": 14
+    }
+  ],
+  "operadoras": [
+    {
+      "nome": "Oi",
+      "codigo": "14",
+      "categoria": "Celular",
+      "preco": 2
+    },
+    {
+      "nome": "Vivo",
+      "codigo": "15",
+      "categoria": "Celular",
+      "preco": 1
+    },
+    {
+      "nome": "Tim",
+      "codigo": "41",
+      "categoria": "Celular",
+      "preco": 3
+    },
+    {
+      "nome": "GVT",
+      "codigo": "25",
+      "categoria": "Fixo",
+      "preco": 1
+    },
+    {
+      "nome": "Embratel",
+      "codigo": "21",
+      "categoria": "Fixo",
+      "preco": 2
+    }
+  ]
+}

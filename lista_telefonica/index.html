@@ -18,25 +18,40 @@
     <script src="lib/angular/angular-locale_pt-br.js"></script>
     <script>
       angular.module("listaTelefonica", ["ngMessages"]);
-      angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope) {
+      angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope, $http) {
         $scope.app = "Lista Telefônica";
-        $scope.contatos = [
-          {nome: "Pedro", telefone: "9999-0001", cor: "blue"},
-          {nome: "Ana", telefone: "9999-1001", cor: "pink"},
-          {nome: "Maria", telefone: "9999-0301", cor: "green"},
-        ];
-        $scope.operadoras = [
-          {nome: "Oi", codigo: "14", categoria: "Celular", preco: 2},
-          {nome: "Vivo", codigo: "15", categoria: "Celular", preco: 1},
-          {nome: "Tim", codigo: "41", categoria: "Celular", preco: 3},
-          {nome: "GVT", codigo: "25", categoria: "Fixo", preco: 1},
-          {nome: "Embratel", codigo: "21", categoria: "Fixo", preco: 2}
-        ];
+        $scope.contatos = [];
+        $scope.operadoras = [];
+
+        let carregarContatos = function () {
+          $http.get("http://localhost:3000/contatos").then(function (data, status) {
+            $scope.contatos = data.data;
+          });
+        }
+        let carregarOperadoras = function () {
+          $http.get("http://localhost:3000/operadoras").then(function (data, status) {
+            $scope.operadoras = data.data;
+          });
+        }
+
         $scope.adicionarContato = function(contato) {
-          $scope.contatos.push(angular.copy(contato));
-          delete $scope.contato;
-          $scope.contatoForm.$setPristine();
-        };
+          $http({
+            url: 'http://localhost:3000/contatos',
+            dataType: 'json',
+            method: 'POST',
+            data: contato,
+            headers: {
+              "Content-Type": "application/json"
+            }
+          }).then(function (contato, status) {
+            delete $scope.contato;
+            $scope.contatoForm.$setPristine();
+            $scope.contato = carregarContatos();
+          }, function errorCallback(response) {
+            console.log('object:', contato, 'response:', response);
+          });
+          };
+
         $scope.apagarContatos = function(contatos) {
           $scope.contatos = contatos.filter(function (contato) {
             if (!contato.selecionado) return contato;
@@ -51,6 +66,9 @@
           $scope.criterioDeOrdenacao = campo;
           $scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
         };
+
+        carregarContatos();
+        carregarOperadoras();
         $scope.classe1 = "selecionado";
         $scope.classe2 = "negrito";
       });
@@ -83,7 +101,7 @@
             </table>
             <hr>
             <form name="contatoForm">
-              <input class="form-control" type="text" ng-model="contato.nome" name="nome" placeholder="Nome" ng-minlength="6" ng-required="true" />
+              <input class="form-control" type="text" ng-model="contato.nome" name="nome" placeholder="Nome" ng-minlength="3" ng-required="true" />
               <input class="form-control" type="text" ng-model="contato.telefone" name="telefone" placeholder="Telefone" ng-minlength="9" ng-pattern="/^\d{4,5}-\d{4}$/" ng-required="true" />
               <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome + ' (' + (operadora.preco|currency) + ')' group by operadora.categoria for operadora in operadoras">
                 <option value="">Selecione uma operadora</option>
@@ -96,7 +114,7 @@
                   Por favor, preencha o nome!
                 </div>
                 <div ng-message="minlength">
-                  O campo nome deve ter no mínimo 6 caracteres.
+                  O campo nome deve ter no mínimo 3 caracteres.
                 </div>
               </div>
 
