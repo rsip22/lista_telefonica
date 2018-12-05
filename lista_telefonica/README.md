@@ -1,7 +1,6 @@
 # App de lista Telefônica com AngularJS
 
-
-Acessando API de contatos (db.json) servida por json-server:
+Servir dados dos contatos por API (db.json) usando por json-server:
 
 ```
 $ npm install json-server
