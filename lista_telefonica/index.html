@@ -54,7 +54,23 @@
 
         $scope.apagarContatos = function(contatos) {
           $scope.contatos = contatos.filter(function (contato) {
-            if (!contato.selecionado) return contato;
+            if (!contato.selecionado){
+              return contato;
+            } else {
+              $http({
+                url: 'http://localhost:3000/contatos/' + contato.id,
+                dataType: 'json',
+                method: 'DELETE',
+                headers: {
+                  "Content-Type": "application/json"
+                }
+              }).then(function (contato, status) {
+                delete $scope.contato;
+                return carregarContatos();
+              }, function errorCallback(response) {
+                console.log('object:', contato, 'response:', response);
+              });
+            };
           });
         };
         $scope.isContatoSelecionado = function (contatos) {

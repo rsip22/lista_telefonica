@@ -1,16 +1,6 @@
 {
   "contatos": [
     {
-      "id": 1,
-      "nome": "Pedro",
-      "telefone": "9999-0001",
-      "operadora": {
-        "nome": "Oi",
-        "codigo": 14,
-        "categoria": "Celular"
-      }
-    },
-    {
       "id": 2,
       "nome": "Ana",
       "telefone": "9999-1001",
@@ -30,94 +20,6 @@
         "categoria": "Celular",
         "preco": 3
       }
-    },
-    {
-      "nome": "Renata",
-      "telefone": "9999-1111",
-      "operadora": {
-        "nome": "Oi",
-        "codigo": "14",
-        "categoria": "Celular",
-        "preco": 2
-      },
-      "id": 4
-    },
-    {
-      "nome": "iuaiosda",
-      "telefone": "1111-1111",
-      "operadora": {
-        "nome": "Oi",
-        "codigo": "14",
-        "categoria": "Celular",
-        "preco": 2
-      },
-      "id": 5
-    },
-    {
-      "nome": "ksjdka",
-      "telefone": "1111-1111",
-      "operadora": {
-        "nome": "Oi",
-        "codigo": "14",
-        "categoria": "Celular",
-        "preco": 2
-      },
-      "id": 6
-    },
-    {
-      "nome": "Porta",
-      "telefone": "1111-1111",
-      "operadora": {
-        "nome": "Oi",
-        "codigo": "14",
-        "categoria": "Celular",
-        "preco": 2
-      },
-      "id": 7
-    },
-    {
-      "nome": "Renata",
-      "telefone": "9999-1111",
-      "operadora": {
-        "nome": "Oi",
-        "codigo": "14",
-        "categoria": "Celular",
-        "preco": 2
-      },
-      "id": 8
-    },
-    {
-      "nome": "Felipe",
-      "telefone": "9999-1111",
-      "operadora": {
-        "nome": "Oi",
-        "codigo": "14",
-        "categoria": "Celular",
-        "preco": 2
-      },
-      "id": 9
-    },
-    {
-      "nome": "Christine",
-      "telefone": "8888-1111",
-      "operadora": {
-        "nome": "Oi",
-        "codigo": "14",
-        "categoria": "Celular",
-        "preco": 2
-      },
-      "id": 10
-    },
-    {
-      "nome": "Postman",
-      "telefone": "9999-1111",
-      "operadora": {
-        "nome": "Oi",
-        "codigo": "14",
-        "categoria": "Celular",
-        "preco": 2
-      },
-      "id": 11
     },
     {
       "nome": "Sarah",
@@ -142,13 +44,13 @@
       "id": 13
     },
     {
-      "nome": "Mary",
-      "telefone": "9999-1020",
+      "nome": "Chris",
+      "telefone": "9999-1010",
       "operadora": {
-        "nome": "Vivo",
-        "codigo": "15",
+        "nome": "Oi",
+        "codigo": "14",
         "categoria": "Celular",
-        "preco": 1
+        "preco": 2
       },
       "id": 14
     }
