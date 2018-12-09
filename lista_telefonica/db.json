@@ -44,8 +44,8 @@
       "id": 13
     },
     {
-      "nome": "Chris",
-      "telefone": "9999-1010",
+      "nome": "Renata",
+      "telefone": "9999-1111",
       "operadora": {
         "nome": "Oi",
         "codigo": "14",
@@ -53,6 +53,39 @@
         "preco": 2
       },
       "id": 14
+    },
+    {
+      "nome": "Chris",
+      "telefone": "9999-1111",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 16
+    },
+    {
+      "nome": "Renata",
+      "telefone": "99999-1111",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 17
+    },
+    {
+      "nome": "Renata A.",
+      "telefone": "9999-1111",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 18
     }
   ],
   "operadoras": [
