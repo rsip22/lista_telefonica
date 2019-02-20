@@ -6,13 +6,19 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
   let carregarContatos = function () {
     contatosAPI.getContatos().then(function (data, status) {
       $scope.contatos = data.data;
+    }).catch(function(response) {
+      console.error("Não foi possível carregar os dados!", response.status, response.data);
+      $scope.error = "Não foi possível carregar os dados!";
     });
-  }
+  };
+
   let carregarOperadoras = function () {
     operadorasAPI.getOperadoras().then(function (data, status) {
       $scope.operadoras = data.data;
+    }).catch(function(data, status) {
+      $scope.error = "Não foi possível carregar os dados!";
     });
-  }
+  };
 
   $scope.adicionarContato = function(contato) {
     contatosAPI.saveContato(contato).then(function (contato, status) {
@@ -22,7 +28,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
     }, function errorCallback(response) {
       console.log('object:', contato, 'response:', response);
     });
-    };
+  };
 
   $scope.apagarContatos = function(contatos) {
     $scope.contatos = contatos.filter(function (contato) {

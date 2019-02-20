@@ -15,7 +15,10 @@
     <script src="js/controllers/listaTelefonicaCtrl.js"></script>
     <script src="js/services/contatosAPIService.js"></script>
     <script src="js/services/operadorasAPIService.js"></script>
-    <script src="js/value/configValue.js"></script>    
+    <script src="js/constant/configConstant.js"></script>
+    <script src="js/filters/nameFilter.js"></script>
+    <script src="js/filters/ellipsisFilter.js"></script>
+    <script src="js/directives/uiAlertDirective.js"></script>
   </head>
 
   <body ng-controller="listaTelefonicaCtrl">
@@ -24,7 +27,8 @@
         <h2 class="text-center" ng-bind="app"></h2>
         <div class="container">
           <div class="row">
-          <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?" />
+
+            <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?" />
 
             <table ng-show="contatos.length > 0" class="table">
               <tr>
@@ -36,7 +40,7 @@
               </tr>
               <tr ng-class="{'selecionado negrito': contato.selecionado}" ng-repeat="contato in contatos | filter:{nome: criterioDeBusca} | orderBy: criterioDeOrdenacao:direcaoDaOrdenacao">
                 <td><input type="checkbox" ng-model="contato.selecionado" />
-                <td>{{ contato.nome }}</td>
+                <td>{{ contato.nome | name | ellipsis:10 }}</td>
                 <td>{{ contato.telefone }}</td>
                 <td>{{ contato.operadora.nome }}</td>
                 <td><div style="width: 10px; height: 10px" ng-style="{'background-color': contato.cor}"></div></td>

@@ -66,17 +66,6 @@
       "id": 16
     },
     {
-      "nome": "Renata",
-      "telefone": "99999-1111",
-      "operadora": {
-        "nome": "Oi",
-        "codigo": "14",
-        "categoria": "Celular",
-        "preco": 2
-      },
-      "id": 17
-    },
-    {
       "nome": "Renata A.",
       "telefone": "9999-1111",
       "operadora": {
@@ -86,6 +75,39 @@
         "preco": 2
       },
       "id": 18
+    },
+    {
+      "nome": "joão da silva",
+      "telefone": "9999-1010",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 20
+    },
+    {
+      "nome": "Priscila",
+      "telefone": "9999-1020",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "id": 21
+    },
+    {
+      "nome": "Amadeus",
+      "telefone": "9999-1101",
+      "operadora": {
+        "nome": "Vivo",
+        "codigo": "15",
+        "categoria": "Celular",
+        "preco": 1
+      },
+      "id": 22
     }
   ],
   "operadoras": [
